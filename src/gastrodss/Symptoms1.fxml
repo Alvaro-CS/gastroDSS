@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.WelcomeController">
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms1Controller">
    <children>
       <Pane prefHeight="78.0" prefWidth="367.0" style="-fx-background-color: #dddddd;">
          <children>
@@ -40,28 +41,52 @@
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Nausea" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Vomit" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Regurgition" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Regurgitation" GridPane.rowIndex="2" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Dysphagia" GridPane.rowIndex="5" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Heartburn" GridPane.rowIndex="3" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Reflux" GridPane.rowIndex="4" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Cough" GridPane.rowIndex="6" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Thoracic pain" GridPane.rowIndex="7" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="nausea" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="vomit" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="regurgitation" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="heartburn" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="reflux" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="dysphagia" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="cough" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <toggleGroup>
+                  <ToggleGroup fx:id="thoracic_pain" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="nauseaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$nausea" GridPane.columnIndex="2" />
+            <RadioButton fx:id="vomitNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$vomit" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <RadioButton fx:id="regurgitationNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$regurgitation" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="heartburnNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$heartburn" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton fx:id="refluxNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$reflux" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton fx:id="dysphagiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$dysphagia" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <RadioButton fx:id="coughNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$cough" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <RadioButton fx:id="thoracic_painNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$thoracic_pain" GridPane.columnIndex="2" GridPane.rowIndex="7" />
          </children>
       </GridPane>
       <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="Next" />
