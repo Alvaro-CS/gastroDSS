@@ -12,11 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-/**
- *
- * @author ALVARO
- */
-public class GastroDSS extends Application {
+
+public class GastroDSSMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {

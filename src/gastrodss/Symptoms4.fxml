@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.WelcomeController">
+   <children>
+      <Pane prefHeight="78.0" prefWidth="367.0" style="-fx-background-color: #dddddd;">
+         <children>
+            <Label layoutX="85.0" layoutY="10.0" prefHeight="58.0" prefWidth="198.0" text="Symptoms">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="24.0" layoutY="97.0" prefHeight="266.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="142.4" minWidth="10.0" prefWidth="131.19998779296876" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="66.20001220703125" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Muscular pain" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Headache" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Ictericia" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Dermatitis herpetiformis" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Rapid pulsations" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Anemia" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Aphthous stomatiti" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Impotence" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Amenorrhea" GridPane.rowIndex="9" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Infertility" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Button layoutX="236.0" layoutY="373.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" text="Go to results" />
+   </children>
+</AnchorPane>
