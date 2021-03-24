@@ -1,3 +1,5 @@
+package gastrodss;
+
 import java.util.List;
 import net.sf.clipsrules.jni.*;
 
