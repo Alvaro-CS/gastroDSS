@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.WelcomeController">
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms3Controller">
    <children>
       <Pane prefHeight="78.0" prefWidth="367.0" style="-fx-background-color: #dddddd;">
          <children>
@@ -40,16 +41,31 @@
             <Label alignment="CENTER" contentDisplay="CENTER" text="Gas" GridPane.rowIndex="2" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Rectal tenesmus" GridPane.rowIndex="3" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Melena" GridPane.rowIndex="4" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <RadioButton mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="constipation" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="diarrhea" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gas" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tenesmus" />
+               </toggleGroup></RadioButton>
+            <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="melena" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="constipationNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$constipation" GridPane.columnIndex="2" />
+            <RadioButton fx:id="diarrheaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$diarrhea" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <RadioButton fx:id="gasNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$gas" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="tenesmusNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$tenesmus" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton fx:id="melenaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$melena" GridPane.columnIndex="2" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="Next" />
