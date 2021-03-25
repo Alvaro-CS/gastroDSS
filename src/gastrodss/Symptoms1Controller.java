@@ -5,9 +5,11 @@
  */
 package gastrodss;
 
+import POJOS.Patient;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,15 +17,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
+import net.sf.clipsrules.jni.CLIPSException;
+import net.sf.clipsrules.jni.Environment;
+import net.sf.clipsrules.jni.FactAddressValue;
 
-public class Symptoms1Controller implements Initializable{
+public class Symptoms1Controller implements Initializable {
 
+    private Patient patient;
     private String patientname;
-
+    private Environment clips;
     @FXML
     private RadioButton nauseaNo;
 
@@ -48,7 +54,11 @@ public class Symptoms1Controller implements Initializable{
     private RadioButton thoracic_painNo;
 
     @FXML
-    private void openSymptoms2(ActionEvent event) throws IOException {
+    private Label nameLabel;
+
+    @FXML
+    private void openSymptoms2(ActionEvent event) throws IOException, CLIPSException {
+        readSymptoms1();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Symptoms2.fxml"));
         Parent symptoms2Parent = loader.load();
@@ -63,14 +73,41 @@ public class Symptoms1Controller implements Initializable{
 //        window.setTitle("WOLFFGRAM");
 //        window.getIcons().add(new Image("/wolff_patient/images/logo.png"));
         window.centerOnScreen();
-
         window.show();
         Stage myStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         myStage.close();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    private void readSymptoms1() throws CLIPSException {
+
+        if (!nauseaNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name nausea) (activated FALSE) (present YES) (asked YES))");
+        }
+        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
+        List<FactAddressValue> diseases0 = clips.findAllFacts("disease");
+        for (FactAddressValue f : diseases0) {
+            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
+        }
+        clips.run();
+        List<FactAddressValue> diseases = clips.findAllFacts("disease");
+        for (FactAddressValue f : diseases) {
+            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
+        }
+        System.out.println("Symptoms: \n");
+        for (FactAddressValue f : symptoms) {
+            System.out.println(f.getSlotValue("name"));
+        }
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+    public void initData(Patient patient, Environment clips) {
+        this.patient = patient;
+        nameLabel.setText("Patient's name: " + patient.getName());
+        this.clips = clips;
+    }
 }

@@ -18,12 +18,13 @@
             </Label>
          </children>
       </Pane>
-      <TextField fx:id="patientname" layoutX="235.0" layoutY="130.0" promptText="Name" />
+      <TextField fx:id="patientName" layoutX="235.0" layoutY="130.0" promptText="Name" />
       <Label layoutX="30.0" layoutY="130.0" text="Introduce patient's name:">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="205.0" layoutY="196.0" mnemonicParsing="false" onAction="#openSymptoms" text="OK" />
+      <Button layoutX="205.0" layoutY="196.0" mnemonicParsing="false" onAction="#openSymptoms1" text="OK" />
+      <Label fx:id="error" layoutX="207.0" layoutY="90.0" />
    </children>
 </AnchorPane>
