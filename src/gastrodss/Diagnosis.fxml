@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
@@ -9,13 +8,12 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="444.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="gastrodss.DiagnosisController">
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.DiagnosisController">
    <children>
       <MenuBar prefHeight="26.0" prefWidth="444.0">
         <menus>
@@ -41,29 +39,14 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="29.0" layoutY="46.0" text="Introduce patient's symptoms:">
+      <Label fx:id="label" layoutX="32.0" layoutY="81.0" prefHeight="26.0" prefWidth="380.0">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <ComboBox layoutX="222.0" layoutY="86.0" prefHeight="26.0" prefWidth="200.0" promptText="Select patient's symptoms" />
       <Separator layoutY="126.0" prefHeight="54.0" prefWidth="444.0" />
-      <TextField layoutX="35.0" layoutY="86.0" promptText="Symptoms" />
-      <Label layoutX="29.0" layoutY="169.0" text="Introduce patient's diseases:">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <ComboBox layoutX="222.0" layoutY="209.0" prefHeight="26.0" prefWidth="200.0" promptText="Select patient's previous diseases" />
-      <TextField layoutX="35.0" layoutY="209.0" promptText="Diseases" />
-      <Separator layoutY="247.0" prefHeight="54.0" prefWidth="444.0" />
-      <Label layoutX="14.0" layoutY="288.0" text="Possible diagnosis:">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <ListView editable="true" layoutX="29.0" layoutY="321.0" prefHeight="200.0" prefWidth="346.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <VBox layoutX="23.0" layoutY="331.0" prefHeight="194.0" prefWidth="406.0">
+      <ListView editable="true" layoutX="15.0" layoutY="157.0" prefHeight="200.0" prefWidth="346.0" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <VBox layoutX="23.0" layoutY="164.0" prefHeight="194.0" prefWidth="406.0">
          <children>
             <HBox prefHeight="200.0" prefWidth="408.0">
                <children>

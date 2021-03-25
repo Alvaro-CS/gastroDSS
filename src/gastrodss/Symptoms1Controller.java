@@ -28,7 +28,6 @@ import net.sf.clipsrules.jni.FactAddressValue;
 public class Symptoms1Controller implements Initializable {
 
     private Patient patient;
-    private String patientname;
     private Environment clips;
     @FXML
     private RadioButton nauseaNo;
@@ -63,8 +62,8 @@ public class Symptoms1Controller implements Initializable {
         loader.setLocation(getClass().getResource("Symptoms2.fxml"));
         Parent symptoms2Parent = loader.load();
 
-        //Symptoms1Controller controller = loader.getController();
-//       controller.initData(patientMoved, com_data_client);
+        Symptoms2Controller controller = loader.getController();
+        controller.initData(patient, clips);
         Scene Symptoms2Scene = new Scene(symptoms2Parent);
         //this line gets the Stage information
         //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -84,16 +83,43 @@ public class Symptoms1Controller implements Initializable {
             patient.setNausea(true);
             clips.assertString("(symptom (name nausea) (activated FALSE) (present YES) (asked YES))");
         }
-        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
-        List<FactAddressValue> diseases0 = clips.findAllFacts("disease");
-        for (FactAddressValue f : diseases0) {
-            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
+        if (!vomitNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name vomit) (activated FALSE) (present YES) (asked YES))");
         }
-        clips.run();
+        if (!regurgitationNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name regurgitation) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!heartburnNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name heartburn) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!refluxNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name reflux) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!dysphagiaNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name dysphagia) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!thoracic_painNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name thoracic-pain) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!coughNo.isSelected()) {
+            patient.setNausea(true);
+            clips.assertString("(symptom (name cough) (activated FALSE) (present YES) (asked YES))");
+        }
+
+        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
+
+        System.out.println("Diseases: \n");
         for (FactAddressValue f : diseases) {
             System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
         }
+
         System.out.println("Symptoms: \n");
         for (FactAddressValue f : symptoms) {
             System.out.println(f.getSlotValue("name"));

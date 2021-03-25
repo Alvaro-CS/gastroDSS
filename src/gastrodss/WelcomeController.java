@@ -69,9 +69,6 @@ public class WelcomeController implements Initializable {
         try {
             clips.load("project2.clp");
             clips.reset();
-            
-                    List<FactAddressValue> diseases0 = clips.findAllFacts("disease");
-        System.out.println("Diseases0: \n" + diseases0);
         } catch (CLIPSException e) {
             e.printStackTrace();
         }

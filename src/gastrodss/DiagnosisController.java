@@ -5,6 +5,7 @@
  */
 package gastrodss;
 
+import POJOS.Patient;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import net.sf.clipsrules.jni.Environment;
 
 
 /**
@@ -25,14 +27,19 @@ import javafx.stage.Stage;
  */
 public class DiagnosisController implements Initializable {
     
+    private Patient patient;
+    private Environment clips;
     @FXML
     private Label label;
-    //comment
 
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+        public void initData(Patient patient, Environment clips) {
+        this.patient = patient;
+        label.setText("The diagnosis for " + patient.getName()+" is the following:");
+        this.clips = clips;
+    }
 }

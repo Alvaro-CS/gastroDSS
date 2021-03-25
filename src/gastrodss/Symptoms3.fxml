@@ -69,5 +69,6 @@
          </children>
       </GridPane>
       <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#openSymptoms4" prefHeight="33.0" prefWidth="56.0" text="Next" />
+      <Label fx:id="nameLabel" layoutX="52.0" layoutY="375.0" prefHeight="18.0" prefWidth="176.0" />
    </children>
 </AnchorPane>
