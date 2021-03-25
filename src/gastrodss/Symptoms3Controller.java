@@ -69,25 +69,27 @@ public class Symptoms3Controller implements Initializable {
     private void readSymptoms3() throws CLIPSException {
 
         if (!constipationNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setConstipation(true);
             clips.assertString("(symptom (name constipation) (activated FALSE) (present YES) (asked YES))");
         }
         if (!diarrheaNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setDiarrhea(true);
             clips.assertString("(symptom (name diarrhea) (activated FALSE) (present YES) (asked YES))");
         }
         if (!gasNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setGas(true);
             clips.assertString("(symptom (name gas) (activated FALSE) (present YES) (asked YES))");
         }
         if (!tenesmusNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setTenesmus(true);
             clips.assertString("(symptom (name rectal-tenesmus) (activated FALSE) (present YES) (asked YES))");
         }
         if (!melenaNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setMelena(true);
             clips.assertString("(symptom (name melena) (activated FALSE) (present YES) (asked YES))");
         }
+        
+        clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
 

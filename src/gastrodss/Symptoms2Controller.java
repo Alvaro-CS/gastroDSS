@@ -31,8 +31,10 @@ public class Symptoms2Controller implements Initializable {
 
     private Patient patient;
     private Environment clips;
+    
     @FXML
     private Label nameLabel;
+    
     @FXML
     private RadioButton abdpainNo;
     @FXML
@@ -75,43 +77,44 @@ public class Symptoms2Controller implements Initializable {
     private void readSymptoms2() throws CLIPSException {
 
         if (!abdpainNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setAbdpain(true);
             clips.assertString("(symptom (name abdominal-pain) (activated FALSE) (present YES) (asked YES))");
         }
         if (!upAbdpainNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setUpAbdpain(true);
             clips.assertString("(symptom (name upper-abdominal-pain) (activated FALSE) (present YES) (asked YES))");
         }
         if (!uprightvaguepainNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setUprightvaguepain(true);
             clips.assertString("(symptom (name upper-right-vague-pain) (activated FALSE) (present YES) (asked YES))");
         }
         if (!colicsNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setColics(true);
             clips.assertString("(symptom (name colics) (activated FALSE) (present YES) (asked YES))");
         }
         if (!anorexiaNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setAnorexia(true);
             clips.assertString("(symptom (name anorexia) (activated FALSE) (present YES) (asked YES))");
         }
         if (!weightlossNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setWeightloss(true);
             clips.assertString("(symptom (name weight-loss) (activated FALSE) (present YES) (asked YES))");
         }
         if (!fatigueNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setFatigue(true);
             clips.assertString("(symptom (name fatigue) (activated FALSE) (present YES) (asked YES))");
         }
 
+        clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
 
-        System.out.println("Diseases: \n");
+        System.out.println("Diseases:");
         for (FactAddressValue f : diseases) {
             System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
         }
 
-        System.out.println("Symptoms: \n");
+        System.out.println("Symptoms:");
         for (FactAddressValue f : symptoms) {
             System.out.println(f.getSlotValue("name"));
         }

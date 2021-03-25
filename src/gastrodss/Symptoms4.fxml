@@ -83,12 +83,12 @@
                </toggleGroup></RadioButton>
             <RadioButton fx:id="muscularPainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$muscularPain" GridPane.columnIndex="2" />
             <RadioButton fx:id="headacheNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$headache" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$ictericia" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$rapidPulsations" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$anemia" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$dermatitis" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$stomatiti" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$impotence" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <RadioButton fx:id="ictericiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$ictericia" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rapidPulsationsNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$rapidPulsations" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton fx:id="anemiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$anemia" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton fx:id="dermatitisNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$dermatitis" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <RadioButton fx:id="stomatitiNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$stomatiti" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <RadioButton fx:id="impotenceNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$impotence" GridPane.columnIndex="2" GridPane.rowIndex="7" />
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <toggleGroup>
                   <ToggleGroup fx:id="amenorrhea" />
@@ -97,8 +97,8 @@
                <toggleGroup>
                   <ToggleGroup fx:id="infertility" />
                </toggleGroup></RadioButton>
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$amenorrhea" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <RadioButton mnemonicParsing="false" selected="true" text="No" toggleGroup="$infertility" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <RadioButton fx:id="amenorrheaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$amenorrhea" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <RadioButton fx:id="infertilityNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$infertility" GridPane.columnIndex="2" GridPane.rowIndex="8" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Amenorrhea" GridPane.rowIndex="9" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Infertility" GridPane.rowIndex="8" />
          </children>

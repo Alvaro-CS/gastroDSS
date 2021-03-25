@@ -29,6 +29,7 @@ public class Symptoms1Controller implements Initializable {
 
     private Patient patient;
     private Environment clips;
+    
     @FXML
     private RadioButton nauseaNo;
 
@@ -49,6 +50,7 @@ public class Symptoms1Controller implements Initializable {
 
     @FXML
     private RadioButton coughNo;
+    
     @FXML
     private RadioButton thoracic_painNo;
 
@@ -84,34 +86,35 @@ public class Symptoms1Controller implements Initializable {
             clips.assertString("(symptom (name nausea) (activated FALSE) (present YES) (asked YES))");
         }
         if (!vomitNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setVomit(true);
             clips.assertString("(symptom (name vomit) (activated FALSE) (present YES) (asked YES))");
         }
         if (!regurgitationNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setRegurgitation(true);
             clips.assertString("(symptom (name regurgitation) (activated FALSE) (present YES) (asked YES))");
         }
         if (!heartburnNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setHeartburn(true);
             clips.assertString("(symptom (name heartburn) (activated FALSE) (present YES) (asked YES))");
         }
         if (!refluxNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setReflux(true);
             clips.assertString("(symptom (name reflux) (activated FALSE) (present YES) (asked YES))");
         }
         if (!dysphagiaNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setDysphagia(true);
             clips.assertString("(symptom (name dysphagia) (activated FALSE) (present YES) (asked YES))");
         }
         if (!thoracic_painNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setThoracic_pain(true);
             clips.assertString("(symptom (name thoracic-pain) (activated FALSE) (present YES) (asked YES))");
         }
         if (!coughNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setCough(true);
             clips.assertString("(symptom (name cough) (activated FALSE) (present YES) (asked YES))");
         }
 
+        clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
 

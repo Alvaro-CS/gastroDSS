@@ -33,6 +33,16 @@ public class Patient {
     private boolean gas;
     private boolean tenesmus;
     private boolean melena;
+    private boolean muscularPain;
+    private boolean headache;
+    private boolean ictericia;
+    private boolean rapidPulsations;
+    private boolean anemia;
+    private boolean dermatitis;
+    private boolean stomatiti;
+    private boolean impotence;
+    private boolean infertility;
+    private boolean amenorrhea;
 
 
     public Patient(String name) {
@@ -57,6 +67,96 @@ public class Patient {
         this.gas = false;
         this.tenesmus = false;
         this.melena = false;
+        this.muscularPain = false;
+        this.headache = false;
+        this.ictericia = false;
+        this.rapidPulsations = false;
+        this.anemia = false;
+        this.dermatitis = false;
+        this.stomatiti = false;
+        this.impotence = false;
+        this.infertility = false;
+        this.amenorrhea = false;
+    }
+
+    public void setMuscularPain(boolean muscularPain) {
+        this.muscularPain = muscularPain;
+    }
+
+    public void setHeadache(boolean headache) {
+        this.headache = headache;
+    }
+
+    public void setIctericia(boolean ictericia) {
+        this.ictericia = ictericia;
+    }
+
+    public void setRapidPulsations(boolean rapidPulsations) {
+        this.rapidPulsations = rapidPulsations;
+    }
+
+    public void setAnemia(boolean anemia) {
+        this.anemia = anemia;
+    }
+
+    public void setDermatitis(boolean dermatitis) {
+        this.dermatitis = dermatitis;
+    }
+
+    public void setStomatiti(boolean stomatiti) {
+        this.stomatiti = stomatiti;
+    }
+
+    public void setImpotence(boolean impotence) {
+        this.impotence = impotence;
+    }
+
+    public void setInfertility(boolean infertility) {
+        this.infertility = infertility;
+    }
+
+    public void setAmenorrhea(boolean amenorrhea) {
+        this.amenorrhea = amenorrhea;
+    }
+
+    public boolean isMuscularPain() {
+        return muscularPain;
+    }
+
+    public boolean isHeadache() {
+        return headache;
+    }
+
+    public boolean isIctericia() {
+        return ictericia;
+    }
+
+    public boolean isRapidPulsations() {
+        return rapidPulsations;
+    }
+
+    public boolean isAnemia() {
+        return anemia;
+    }
+
+    public boolean isDermatitis() {
+        return dermatitis;
+    }
+
+    public boolean isStomatiti() {
+        return stomatiti;
+    }
+
+    public boolean isImpotence() {
+        return impotence;
+    }
+
+    public boolean isInfertility() {
+        return infertility;
+    }
+
+    public boolean isAmenorrhea() {
+        return amenorrhea;
     }
 
     public String getName() {

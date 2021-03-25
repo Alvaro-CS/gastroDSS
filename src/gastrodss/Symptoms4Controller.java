@@ -79,13 +79,53 @@ public class Symptoms4Controller implements Initializable {
 private void readSymptoms4() throws CLIPSException {
 
         if (!muscularPainNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setMuscularPain(true);
             clips.assertString("(symptom (name muscular-pain) (activated FALSE) (present YES) (asked YES))");
         }
         if (!headacheNo.isSelected()) {
-            patient.setNausea(true);
+            patient.setHeadache(true);
             clips.assertString("(symptom (name headache) (activated FALSE) (present YES) (asked YES))");
         }
+        
+        if (!ictericiaNo.isSelected()) {
+            patient.setIctericia(true);
+            clips.assertString("(symptom (name ictericia) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!rapidPulsationsNo.isSelected()) {
+            patient.setRapidPulsations(true);
+            clips.assertString("(symptom (name rapid-pulsations) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!anemiaNo.isSelected()) {
+            patient.setAnemia(true);
+            clips.assertString("(symptom (name anemia) (activated FALSE) (present YES) (asked YES))");
+        }
+        if (!dermatitisNo.isSelected()) {
+            patient.setDermatitis(true);
+            clips.assertString("(symptom (name dermatitis-herpetiformis) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!stomatitiNo.isSelected()) {
+            patient.setStomatiti(true);
+            clips.assertString("(symptom (name aphthous-stomatiti) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!impotenceNo.isSelected()) {
+            patient.setImpotence(true);
+            clips.assertString("(symptom (name impotence) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!infertilityNo.isSelected()) {
+            patient.setInfertility(true);
+            clips.assertString("(symptom (name infertility) (activated FALSE) (present YES) (asked YES))");
+        }
+        
+        if (!amenorrheaNo.isSelected()) {
+            patient.setAmenorrhea(true);
+            clips.assertString("(symptom (name amenorrhea) (activated FALSE) (present YES) (asked YES))");
+        }
+   
         clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
@@ -97,12 +137,13 @@ private void readSymptoms4() throws CLIPSException {
 
         System.out.println("Symptoms: \n");
         for (FactAddressValue f : symptoms) {
-            System.out.println(f.getSlotValue("name"));
+            System.out.println(f.getSlotValue("name")+" "+f.getSlotValue("activated"));
         }
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
+    
     public void initData(Patient patient, Environment clips) {
         this.patient = patient;
         nameLabel.setText("Patient's name: " + patient.getName());
