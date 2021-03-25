@@ -89,6 +89,6 @@
             <RadioButton fx:id="thoracic_painNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$thoracic_pain" GridPane.columnIndex="2" GridPane.rowIndex="7" />
          </children>
       </GridPane>
-      <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="Next" />
+      <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#openSymptoms2" prefHeight="33.0" prefWidth="56.0" text="Next" />
    </children>
 </AnchorPane>

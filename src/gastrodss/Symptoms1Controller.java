@@ -5,13 +5,22 @@
  */
 package gastrodss;
 
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
-public class Symptoms1Controller {
+public class Symptoms1Controller implements Initializable{
 
     private String patientname;
 
@@ -38,8 +47,30 @@ public class Symptoms1Controller {
     @FXML
     private RadioButton thoracic_painNo;
 
-    void openSymptoms1(ActionEvent event) {
+    @FXML
+    private void openSymptoms2(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Symptoms2.fxml"));
+        Parent symptoms2Parent = loader.load();
 
+        //Symptoms1Controller controller = loader.getController();
+//       controller.initData(patientMoved, com_data_client);
+        Scene Symptoms2Scene = new Scene(symptoms2Parent);
+        //this line gets the Stage information
+        //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Stage window = new Stage();
+        window.setScene(Symptoms2Scene);
+//        window.setTitle("WOLFFGRAM");
+//        window.getIcons().add(new Image("/wolff_patient/images/logo.png"));
+        window.centerOnScreen();
+
+        window.show();
+        Stage myStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        myStage.close();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
     }
 
 }

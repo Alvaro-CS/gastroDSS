@@ -103,6 +103,6 @@
             <Label alignment="CENTER" contentDisplay="CENTER" text="Infertility" GridPane.rowIndex="8" />
          </children>
       </GridPane>
-      <Button layoutX="236.0" layoutY="373.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" text="Go to results" />
+      <Button layoutX="236.0" layoutY="373.0" mnemonicParsing="false" onAction="#openDiagnosis" prefHeight="34.0" prefWidth="88.0" text="Go to results" />
    </children>
 </AnchorPane>

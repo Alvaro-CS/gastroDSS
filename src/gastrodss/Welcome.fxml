@@ -24,6 +24,6 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="205.0" layoutY="196.0" mnemonicParsing="false" text="OK" />
+      <Button layoutX="205.0" layoutY="196.0" mnemonicParsing="false" onAction="#openSymptoms" text="OK" />
    </children>
 </AnchorPane>

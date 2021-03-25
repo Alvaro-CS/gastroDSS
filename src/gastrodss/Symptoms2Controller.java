@@ -6,7 +6,7 @@
 package gastrodss;
 
 
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -36,15 +36,14 @@ public class Symptoms2Controller implements Initializable  {
     @FXML private RadioButton fatigueNo;
     
 
-    @FXML
-    void openSymptoms3(ActionEvent event)throws IOException {
+ @FXML
+    private void openSymptoms3(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Symptoms3.fxml"));
         Parent symptoms3Parent = loader.load();
 
-        Symptoms3Controller controller = loader.getController();
+        //Symptoms1Controller controller = loader.getController();
 //       controller.initData(patientMoved, com_data_client);
-
         Scene Symptoms3Scene = new Scene(symptoms3Parent);
         //this line gets the Stage information
         //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -55,12 +54,12 @@ public class Symptoms2Controller implements Initializable  {
         window.centerOnScreen();
 
         window.show();
-
+        Stage myStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        myStage.close();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

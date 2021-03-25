@@ -82,6 +82,6 @@
             <RadioButton fx:id="fatigueNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fatigue" GridPane.columnIndex="2" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#openSymptoms1" prefHeight="33.0" prefWidth="56.0" text="Next" />
+      <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#openSymptoms3" prefHeight="33.0" prefWidth="56.0" text="Next" />
    </children>
 </AnchorPane>
