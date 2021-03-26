@@ -739,7 +739,7 @@
 	?disease <- (disease (name ?name) (score ?score) (total ?total))
 	(test (> (/ ?score ?total) 0))
 	=>
-	(printout t (/ ?score ?total)  "  " ?name crlf)
+	(printout t (/ ?score ?total)  "  " ?name crlf )
 
 )
 

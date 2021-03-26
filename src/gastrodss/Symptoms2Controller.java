@@ -49,7 +49,9 @@ public class Symptoms2Controller implements Initializable {
     private RadioButton weightlossNo;
     @FXML
     private RadioButton fatigueNo;
-
+    @FXML
+    private RadioButton feverNo;
+    
     @FXML
     private void openSymptoms3(ActionEvent event) throws IOException, CLIPSException {
         readSymptoms2();
@@ -104,8 +106,11 @@ public class Symptoms2Controller implements Initializable {
             patient.setFatigue(true);
             clips.assertString("(symptom (name fatigue) (activated FALSE) (present YES) (asked YES))");
         }
+        if (!feverNo.isSelected()) {
+            patient.setFever(true);
+            clips.assertString("(symptom (name fever) (activated FALSE) (present YES) (asked YES))");
+        }
 
-        clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
 

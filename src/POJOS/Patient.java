@@ -43,7 +43,7 @@ public class Patient {
     private boolean impotence;
     private boolean infertility;
     private boolean amenorrhea;
-
+    private boolean fever;
 
     public Patient(String name) {
         this.name = name;
@@ -77,6 +77,15 @@ public class Patient {
         this.impotence = false;
         this.infertility = false;
         this.amenorrhea = false;
+        this.fever = false;
+    }
+
+    public boolean isFever() {
+        return fever;
+    }
+
+    public void setFever(boolean fever) {
+        this.fever = fever;
     }
 
     public void setMuscularPain(boolean muscularPain) {

@@ -114,7 +114,6 @@ public class Symptoms1Controller implements Initializable {
             clips.assertString("(symptom (name cough) (activated FALSE) (present YES) (asked YES))");
         }
 
-        clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
         List<FactAddressValue> diseases = clips.findAllFacts("disease");
 
