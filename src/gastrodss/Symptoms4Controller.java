@@ -128,12 +128,6 @@ private void readSymptoms4() throws CLIPSException {
    
         clips.run();
         List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
-        List<FactAddressValue> diseases = clips.findAllFacts("disease");
-
-        System.out.println("Diseases: \n");
-        for (FactAddressValue f : diseases) {
-            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
-        }
 
         System.out.println("Symptoms: \n");
         for (FactAddressValue f : symptoms) {
