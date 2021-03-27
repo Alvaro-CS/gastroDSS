@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
@@ -47,12 +48,11 @@ public class WelcomeController implements Initializable {
             Symptoms1Controller controller = loader.getController();
             controller.initData(p, clips);
             Scene Symptoms1Scene = new Scene(symptoms1Parent);
-            //this line gets the Stage information
-            //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
             Stage window = new Stage();
             window.setScene(Symptoms1Scene);
-//        window.setTitle("WOLFFGRAM");
-//        window.getIcons().add(new Image("/wolff_patient/images/logo.png"));
+            window.setTitle("Gastroenterology DSS");
+            window.getIcons().add(new Image("/resources/icon.png"));
             window.centerOnScreen();
 
             window.show();

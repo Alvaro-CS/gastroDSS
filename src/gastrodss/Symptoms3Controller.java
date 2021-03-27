@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
@@ -53,12 +54,11 @@ public class Symptoms3Controller implements Initializable {
         Symptoms4Controller controller = loader.getController();
         controller.initData(patient, clips);
         Scene Symptoms4Scene = new Scene(symptoms4Parent);
-        //this line gets the Stage information
-        //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   
         Stage window = new Stage();
         window.setScene(Symptoms4Scene);
-//        window.setTitle("WOLFFGRAM");
-//        window.getIcons().add(new Image("/wolff_patient/images/logo.png"));
+        window.setTitle("Gastroenterology DSS");
+        window.getIcons().add(new Image("/resources/icon.png"));
         window.centerOnScreen();
 
         window.show();
