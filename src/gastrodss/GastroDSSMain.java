@@ -23,6 +23,7 @@ public class GastroDSSMain extends Application {
         stage.setScene(scene); 
         stage.centerOnScreen();
         stage.setTitle("GastroDSS");
+        stage.getIcons().add(new Image("/resources/icon.png"));
         stage.show();
     }
 
