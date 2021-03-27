@@ -88,19 +88,6 @@ public class Symptoms3Controller implements Initializable {
             patient.setMelena(true);
             clips.assertString("(symptom (name melena) (activated FALSE) (present YES) (asked YES))");
         }
-        
-        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
-        List<FactAddressValue> diseases = clips.findAllFacts("disease");
-
-        System.out.println("Diseases: \n");
-        for (FactAddressValue f : diseases) {
-            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
-        }
-
-        System.out.println("Symptoms: \n");
-        for (FactAddressValue f : symptoms) {
-            System.out.println(f.getSlotValue("name"));
-        }
     }
 
     @Override

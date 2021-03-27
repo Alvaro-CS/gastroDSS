@@ -24,9 +24,9 @@
       </Pane>
       <GridPane layoutX="24.0" layoutY="97.0" prefHeight="266.0" prefWidth="300.0">
         <columnConstraints>
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="131.9999755859375" minWidth="10.0" prefWidth="131.9999755859375" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="65.4000244140625" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="159.99996337890624" minWidth="10.0" prefWidth="159.99996337890624" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="73.60003662109375" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="67.59996032714844" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -81,7 +81,7 @@
             <RadioButton fx:id="anorexiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$anorexia" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <RadioButton fx:id="weightlossNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$weightloss" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <RadioButton fx:id="fatigueNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fatigue" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Fever:" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Fever" GridPane.rowIndex="7" />
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <toggleGroup>
                   <ToggleGroup fx:id="fever" />

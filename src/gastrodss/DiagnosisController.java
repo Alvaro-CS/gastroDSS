@@ -9,6 +9,7 @@ import POJOS.Disease;
 import POJOS.Patient;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,6 +47,8 @@ public class DiagnosisController implements Initializable {
 
     private List<ProgressBar> pbars;
     private List<Label> labels;
+    private List<Label> labelsp;
+
     @FXML
     private Label label0;
 
@@ -118,6 +121,42 @@ public class DiagnosisController implements Initializable {
     @FXML
     private ProgressBar pbar11;
 
+    @FXML
+    private Label labelp11;
+
+    @FXML
+    private Label labelp10;
+
+    @FXML
+    private Label labelp9;
+
+    @FXML
+    private Label labelp8;
+
+    @FXML
+    private Label labelp7;
+
+    @FXML
+    private Label labelp6;
+
+    @FXML
+    private Label labelp5;
+
+    @FXML
+    private Label labelp4;
+
+    @FXML
+    private Label labelp3;
+
+    @FXML
+    private Label labelp2;
+
+    @FXML
+    private Label labelp1;
+
+    @FXML
+    private Label labelp0;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         labels = new ArrayList<>();
@@ -127,6 +166,10 @@ public class DiagnosisController implements Initializable {
         pbars = new ArrayList<>();
         List<ProgressBar> list2 = Arrays.asList(pbar0, pbar1, pbar2, pbar3, pbar4, pbar5, pbar6, pbar7, pbar8, pbar9, pbar10, pbar11);
         pbars.addAll(list2);
+
+        labelsp = new ArrayList<>();
+        List<Label> list3 = Arrays.asList(labelp0, labelp1, labelp2, labelp3, labelp4, labelp5, labelp6, labelp7, labelp8, labelp9, labelp10, labelp11);
+        labelsp.addAll(list3);
     }
 
     private void showDiagnosis() throws CLIPSException {
@@ -148,12 +191,19 @@ public class DiagnosisController implements Initializable {
                 return (int) (d1.getScore() * 100 - d2.getScore() * 100);
             }
         });
-        System.out.println("Antes");
-        System.out.println(labels);
-        for (int i = 0; i <labels.size(); i++) {
+        DecimalFormat f = new DecimalFormat("#.00"); //for showing only 2 decimals
+        float percentage;
+        for (int i = 0; i < labels.size(); i++) {
             System.out.println(i);
             labels.get(i).setText(diseases.get(diseases.size() - 1 - i).getName());
             pbars.get(i).setProgress(diseases.get(diseases.size() - 1 - i).getScore());
+            percentage = diseases.get(diseases.size() - 1 - i).getScore() * 100;
+            if (percentage == 0.0) {
+                labelsp.get(i).setText("    <0.01 %"); //we cannot say a disease has 0%
+            } else {
+                labelsp.get(i).setText("    " + f.format(percentage) + " %");
+            }
+
         }
         System.out.println(diseases);
     }

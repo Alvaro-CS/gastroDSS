@@ -19,9 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
@@ -109,19 +106,6 @@ public class Symptoms2Controller implements Initializable {
         if (!feverNo.isSelected()) {
             patient.setFever(true);
             clips.assertString("(symptom (name fever) (activated FALSE) (present YES) (asked YES))");
-        }
-
-        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
-        List<FactAddressValue> diseases = clips.findAllFacts("disease");
-
-        System.out.println("Diseases:");
-        for (FactAddressValue f : diseases) {
-            System.out.println(f.getSlotValue("name") + " " + f.getSlotValue("score"));
-        }
-
-        System.out.println("Symptoms:");
-        for (FactAddressValue f : symptoms) {
-            System.out.println(f.getSlotValue("name"));
         }
     }
 

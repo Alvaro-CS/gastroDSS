@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" style="-fx-background-color: F5FF8FFF8CE9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms4Controller">
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="367.0" style="-fx-background-color: F5FF8FFF8CE9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms4Controller">
    <children>
       <Pane prefHeight="78.0" prefWidth="367.0" style="-fx-background-color: b1d182;">
          <children>
@@ -24,9 +24,9 @@
       </Pane>
       <GridPane layoutX="24.0" layoutY="97.0" prefHeight="266.0" prefWidth="300.0">
         <columnConstraints>
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="142.4" minWidth="10.0" prefWidth="131.19998779296876" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="66.20001220703125" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="152.7999755859375" minWidth="10.0" prefWidth="152.7999755859375" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="76.6" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="70.99999999999997" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
