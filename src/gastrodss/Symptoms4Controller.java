@@ -61,8 +61,7 @@ public class Symptoms4Controller implements Initializable {
         loader.setLocation(getClass().getResource("Diagnosis.fxml"));
         Parent diagnosisParent = loader.load();
 
-        DiagnosisController controller = loader.getController();
-           controller.initData(patient, clips);
+        
         Scene diagnosisScene = new Scene(diagnosisParent);
         //this line gets the Stage information
         //Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -71,7 +70,8 @@ public class Symptoms4Controller implements Initializable {
 //        window.setTitle("WOLFFGRAM");
 //        window.getIcons().add(new Image("/wolff_patient/images/logo.png"));
         window.centerOnScreen();
-
+        DiagnosisController controller = loader.getController();
+           controller.initData(patient, clips,window);
         window.show();
         Stage myStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         myStage.close();

@@ -7,13 +7,20 @@ package gastrodss;
 
 import POJOS.Disease;
 import POJOS.Patient;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -28,6 +35,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
@@ -38,6 +46,10 @@ import net.sf.clipsrules.jni.FactAddressValue;
  * @author ALVARO
  */
 public class DiagnosisController implements Initializable {
+
+    private SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+    private Stage window; //for filechooser
 
     private Patient patient;
     private Environment clips;
@@ -194,7 +206,6 @@ public class DiagnosisController implements Initializable {
         DecimalFormat f = new DecimalFormat("#.00"); //for showing only 2 decimals
         float percentage;
         for (int i = 0; i < labels.size(); i++) {
-            System.out.println(i);
             labels.get(i).setText(diseases.get(diseases.size() - 1 - i).getName());
             pbars.get(i).setProgress(diseases.get(diseases.size() - 1 - i).getScore());
             percentage = diseases.get(diseases.size() - 1 - i).getScore() * 100;
@@ -208,8 +219,38 @@ public class DiagnosisController implements Initializable {
         System.out.println(diseases);
     }
 
-    public void initData(Patient patient, Environment clips) throws CLIPSException {
+    @FXML
+    private void saveRecords(ActionEvent event) throws FileNotFoundException, IOException, CLIPSException {
+        FileChooser fileChooser = new FileChooser();
 
+        //Set extension filter for text files
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+        fileChooser.setTitle("Save the patient's symptoms and diagnosis.");
+
+        //Show save file dialog
+        File file = fileChooser.showSaveDialog(window);
+
+        if (file != null) {
+            //save the records
+            ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream(file));
+            o.writeObject("Date of data acquisition: " + formatter.format(new Date()) + "\n");
+            o.writeObject("Name: " + patient.getName() + "\n");
+            o.writeObject("Recorded symptoms:");
+            List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
+            for (FactAddressValue f : symptoms) {
+                o.writeObject(f.getSlotValue("name").toString());
+            }
+            o.writeObject("Diagnosis:");
+            for (int i = 0; i < labels.size(); i++) {
+                o.writeObject(labels.get(i).getText() + ": " + labelsp.get(i).getText() + "\n");
+            }
+            o.close();
+        }
+    }
+
+    public void initData(Patient patient, Environment clips, Stage window) throws CLIPSException {
+        this.window = window;
         this.patient = patient;
         label.setText("The diagnosis for " + patient.getName() + " is the following:");
         this.clips = clips;

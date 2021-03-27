@@ -22,7 +22,6 @@ import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
-import net.sf.clipsrules.jni.FactAddressValue;
 
 public class Symptoms2Controller implements Initializable {
 

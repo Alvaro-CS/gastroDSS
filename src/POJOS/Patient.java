@@ -5,11 +5,13 @@
  */
 package POJOS;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ALVARO
  */
-public class Patient {
+public class Patient implements Serializable{
 
     private String name;
 
