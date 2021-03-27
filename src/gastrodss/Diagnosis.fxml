@@ -124,18 +124,18 @@
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="pbar0" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" />
-            <ProgressBar fx:id="pbar1" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ProgressBar fx:id="pbar3" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ProgressBar fx:id="pbar2" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ProgressBar fx:id="pbar4" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ProgressBar fx:id="pbar5" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ProgressBar fx:id="pbar6" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ProgressBar fx:id="pbar7" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ProgressBar fx:id="pbar8" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <ProgressBar fx:id="pbar9" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <ProgressBar fx:id="pbar10" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <ProgressBar fx:id="pbar11" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <ProgressBar fx:id="pbar0" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" />
+            <ProgressBar fx:id="pbar1" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ProgressBar fx:id="pbar3" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ProgressBar fx:id="pbar2" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ProgressBar fx:id="pbar4" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ProgressBar fx:id="pbar5" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ProgressBar fx:id="pbar6" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ProgressBar fx:id="pbar7" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ProgressBar fx:id="pbar8" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ProgressBar fx:id="pbar9" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ProgressBar fx:id="pbar10" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <ProgressBar fx:id="pbar11" prefHeight="18.0" prefWidth="171.0" progress="1.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
          </children>
       </GridPane>
    </children>
