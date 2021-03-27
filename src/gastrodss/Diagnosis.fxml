@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.DiagnosisController">
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="444.0" style="-fx-background-color: F5FF8FFF8CE9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.DiagnosisController">
    <children>
       <MenuBar prefHeight="26.0" prefWidth="444.0">
         <menus>
@@ -64,78 +64,78 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="label0" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a">
+            <Label fx:id="label0" prefHeight="13.0" prefWidth="146.0">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label1" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="1">
+            <Label fx:id="label1" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="1">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label2" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="2">
+            <Label fx:id="label2" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="2">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label3" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="3">
+            <Label fx:id="label3" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="3">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label4" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="4">
+            <Label fx:id="label4" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="4">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label5" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="5">
+            <Label fx:id="label5" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="5">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label6" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="6">
+            <Label fx:id="label6" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="6">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label7" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="7">
+            <Label fx:id="label7" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="7">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label8" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="8">
+            <Label fx:id="label8" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="8">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label9" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="9">
+            <Label fx:id="label9" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="9">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label10" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="10">
+            <Label fx:id="label10" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="10">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="label11" prefHeight="13.0" prefWidth="146.0" textFill="#cd0a0a" GridPane.rowIndex="11">
+            <Label fx:id="label11" prefHeight="13.0" prefWidth="146.0" GridPane.rowIndex="11">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="pbar0" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" />
-            <ProgressBar fx:id="pbar1" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ProgressBar fx:id="pbar3" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ProgressBar fx:id="pbar2" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ProgressBar fx:id="pbar4" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ProgressBar fx:id="pbar5" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ProgressBar fx:id="pbar6" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ProgressBar fx:id="pbar7" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ProgressBar fx:id="pbar8" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <ProgressBar fx:id="pbar9" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <ProgressBar fx:id="pbar10" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <ProgressBar fx:id="pbar11" prefHeight="18.0" prefWidth="171.0" progress="0.88" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <ProgressBar fx:id="pbar0" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" />
+            <ProgressBar fx:id="pbar1" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ProgressBar fx:id="pbar3" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ProgressBar fx:id="pbar2" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ProgressBar fx:id="pbar4" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ProgressBar fx:id="pbar5" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ProgressBar fx:id="pbar6" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ProgressBar fx:id="pbar7" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ProgressBar fx:id="pbar8" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ProgressBar fx:id="pbar9" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ProgressBar fx:id="pbar10" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <ProgressBar fx:id="pbar11" prefHeight="18.0" prefWidth="171.0" progress="0.88" style="-fx-accent: b1d182;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
          </children>
       </GridPane>
    </children>
