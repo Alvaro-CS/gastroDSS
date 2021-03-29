@@ -8,10 +8,7 @@ package POJOS;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-/**
- *
- * @author ALVARO
- */
+
 public class Patient implements Serializable{
 
     private String name;

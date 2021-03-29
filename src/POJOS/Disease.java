@@ -5,10 +5,6 @@
  */
 package POJOS;
 
-/**
- *
- * @author ALVARO
- */
 public class Disease implements Comparable<Disease> {
 
     private String name;
