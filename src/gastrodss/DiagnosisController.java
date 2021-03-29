@@ -36,6 +36,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
@@ -243,6 +244,8 @@ public class DiagnosisController implements Initializable {
             }
             printW.write("Date of data acquisition: " + formatter.format(new Date()) + "\n");
             printW.write("\nName: " + patient.getName() + "\n");
+            printW.write("Gender: " + patient.getGender() + "\n");
+            printW.write("Date of birth: " + patient.getBirth().toString() + "\n");
             printW.write("\nRecorded symptoms: \n");
             List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
             for (FactAddressValue f : symptoms) {
@@ -255,6 +258,25 @@ public class DiagnosisController implements Initializable {
             }
             printW.close();
         }
+    }
+    
+    @FXML
+    private void newPatient(ActionEvent event) throws IOException, CLIPSException {
+        clips.clear();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Welcome.fxml"));
+        Parent welcome = loader.load();
+
+        Scene welcomeScene = new Scene(welcome);
+
+        Stage window = new Stage();
+        window.setScene(welcomeScene);
+        window.setTitle("Gastroenterology DSS");
+        window.getIcons().add(new Image("/resources/icon.png"));
+        window.centerOnScreen();
+        window.show();
+        Stage myStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        myStage.close();
     }
 
     public void initData(Patient patient, Environment clips, Stage window) throws CLIPSException {
