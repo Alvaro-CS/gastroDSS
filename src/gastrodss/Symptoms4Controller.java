@@ -126,12 +126,7 @@ private void readSymptoms4() throws CLIPSException {
         }
    
         clips.run();
-        List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
-
-        System.out.println("Symptoms: \n");
-        for (FactAddressValue f : symptoms) {
-            System.out.println(f.getSlotValue("name")+" "+f.getSlotValue("activated"));
-        }
+        
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -139,7 +134,7 @@ private void readSymptoms4() throws CLIPSException {
     
     public void initData(Patient patient, Environment clips) {
         this.patient = patient;
-        nameLabel.setText("Patient's name: " + patient.getName());
+        nameLabel.setText("Patient: " + patient.getName());
         this.clips = clips;
     }
 }

@@ -96,7 +96,7 @@ public class Symptoms3Controller implements Initializable {
 
     public void initData(Patient patient, Environment clips) {
         this.patient = patient;
-        nameLabel.setText("Patient's name: " + patient.getName());
+        nameLabel.setText("Patient: " + patient.getName());
         this.clips = clips;
     }
 }

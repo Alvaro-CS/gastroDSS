@@ -13,6 +13,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -216,7 +217,6 @@ public class DiagnosisController implements Initializable {
             }
 
         }
-        System.out.println(diseases);
     }
 
     @FXML
@@ -233,26 +233,34 @@ public class DiagnosisController implements Initializable {
 
         if (file != null) {
             //save the records
-            ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream(file));
-            o.writeObject("Date of data acquisition: " + formatter.format(new Date()) + "\n");
-            o.writeObject("Name: " + patient.getName() + "\n");
-            o.writeObject("Recorded symptoms:");
+
+            PrintWriter printW = null;
+            try {
+                printW = new PrintWriter(file);
+                
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            printW.write("Date of data acquisition: " + formatter.format(new Date()) + "\n");
+            printW.write("\nName: " + patient.getName() + "\n");
+            printW.write("\nRecorded symptoms: \n");
             List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
             for (FactAddressValue f : symptoms) {
-                o.writeObject(f.getSlotValue("name").toString());
+                printW.write(" "+f.getSlotValue("name").toString());
             }
-            o.writeObject("Diagnosis:");
+            
+            printW.write("\n\nDiagnosis: \n");
             for (int i = 0; i < labels.size(); i++) {
-                o.writeObject(labels.get(i).getText() + ": " + labelsp.get(i).getText() + "\n");
+                printW.write("\t"+labels.get(i).getText() + ": " + labelsp.get(i).getText() + "\n");
             }
-            o.close();
+            printW.close();
         }
     }
 
     public void initData(Patient patient, Environment clips, Stage window) throws CLIPSException {
         this.window = window;
         this.patient = patient;
-        label.setText("The diagnosis for " + patient.getName() + " is the following:");
+        label.setText("Patient: " + patient.getName());
         this.clips = clips;
         showDiagnosis();
     }

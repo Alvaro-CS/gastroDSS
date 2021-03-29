@@ -6,6 +6,7 @@
 package POJOS;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  *
@@ -14,7 +15,8 @@ import java.io.Serializable;
 public class Patient implements Serializable{
 
     private String name;
-
+    private String gender;
+    private LocalDate birth;
     private boolean nausea;
     private boolean vomit;
     private boolean regurgitation;
@@ -47,8 +49,10 @@ public class Patient implements Serializable{
     private boolean amenorrhea;
     private boolean fever;
 
-    public Patient(String name) {
+    public Patient(String name, String gender, LocalDate birth) {
         this.name = name;
+        this.gender=gender;
+        this.birth= birth;
         this.nausea = false;
         this.vomit = false;
         this.regurgitation = false;
@@ -337,5 +341,27 @@ public class Patient implements Serializable{
     public void setMelena(boolean melena) {
         this.melena = melena;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public LocalDate getBirth() {
+        return birth;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setBirth(LocalDate birth) {
+        this.birth = birth;
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" + "name=" + name + ", gender=" + gender + ", birth=" + birth + ", nausea=" + nausea + ", vomit=" + vomit + ", regurgitation=" + regurgitation + ", heartburn=" + heartburn + ", reflux=" + reflux + ", dysphagia=" + dysphagia + ", cough=" + cough + ", thoracic_pain=" + thoracic_pain + ", abdpain=" + abdpain + ", upAbdpain=" + upAbdpain + ", uprightvaguepain=" + uprightvaguepain + ", colics=" + colics + ", anorexia=" + anorexia + ", weightloss=" + weightloss + ", fatigue=" + fatigue + ", constipation=" + constipation + ", diarrhea=" + diarrhea + ", gas=" + gas + ", tenesmus=" + tenesmus + ", melena=" + melena + ", muscularPain=" + muscularPain + ", headache=" + headache + ", ictericia=" + ictericia + ", rapidPulsations=" + rapidPulsations + ", anemia=" + anemia + ", dermatitis=" + dermatitis + ", stomatiti=" + stomatiti + ", impotence=" + impotence + ", infertility=" + infertility + ", amenorrhea=" + amenorrhea + ", fever=" + fever + '}';
+    }
+    
     
 }

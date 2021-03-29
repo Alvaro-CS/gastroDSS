@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -11,26 +13,31 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" style="-fx-background-color: F5FF8FFF8CE9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms2Controller">
+<AnchorPane id="AnchorPane" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="316.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gastrodss.Symptoms2Controller">
    <children>
       <Pane prefHeight="78.0" prefWidth="367.0" style="-fx-background-color: b1d182;">
          <children>
-            <Label layoutX="85.0" layoutY="10.0" prefHeight="58.0" prefWidth="198.0" text="Symptoms">
+            <Label layoutX="124.0" layoutY="13.0" prefHeight="58.0" prefWidth="198.0" text="Symptoms" textFill="#fffafa">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
+            <ImageView fitHeight="58.0" fitWidth="64.0" layoutX="53.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/blanca.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <GridPane layoutX="24.0" layoutY="97.0" prefHeight="266.0" prefWidth="300.0">
+      <GridPane layoutX="-6.0" layoutY="90.0" prefHeight="266.0" prefWidth="342.0">
         <columnConstraints>
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="159.99996337890624" minWidth="10.0" prefWidth="159.99996337890624" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="73.60003662109375" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="175.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.80005645751953" minWidth="10.0" prefWidth="79.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="67.59996032714844" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -39,58 +46,136 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Abdominal pain" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Upper abdominal pain" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Upper right vague pain" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Weight loss" GridPane.rowIndex="5" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Colics" GridPane.rowIndex="3" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Anorexia" GridPane.rowIndex="4" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Fatigue" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Abdominal pain">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Upper abdominal pain" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Upper right vague pain" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Weight loss" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Colics" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Anorexia" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Fatigue" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
                <toggleGroup>
                   <ToggleGroup fx:id="abdominalPain" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <toggleGroup>
                   <ToggleGroup fx:id="upperAbdPain" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <toggleGroup>
                   <ToggleGroup fx:id="upperRightVaguePain" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <toggleGroup>
                   <ToggleGroup fx:id="colics" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <toggleGroup>
                   <ToggleGroup fx:id="anorexia" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <toggleGroup>
                   <ToggleGroup fx:id="weightloss" />
-               </toggleGroup></RadioButton>
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <toggleGroup>
                   <ToggleGroup fx:id="fatigue" />
-               </toggleGroup></RadioButton>
-            <RadioButton fx:id="abdpainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$abdominalPain" GridPane.columnIndex="2" />
-            <RadioButton fx:id="upAbdpainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$upperAbdPain" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <RadioButton fx:id="uprightvaguepainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$upperRightVaguePain" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <RadioButton fx:id="colicsNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$colics" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <RadioButton fx:id="anorexiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$anorexia" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <RadioButton fx:id="weightlossNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$weightloss" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <RadioButton fx:id="fatigueNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fatigue" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Fever" GridPane.rowIndex="7" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="abdpainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$abdominalPain" GridPane.columnIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="upAbdpainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$upperAbdPain" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="uprightvaguepainNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$upperRightVaguePain" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="colicsNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$colics" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="anorexiaNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$anorexia" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="weightlossNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$weightloss" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="fatigueNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fatigue" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Fever" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
             <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <toggleGroup>
                   <ToggleGroup fx:id="fever" />
                </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </RadioButton>
-            <RadioButton fx:id="feverNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fever" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <RadioButton fx:id="feverNo" mnemonicParsing="false" selected="true" text="No" toggleGroup="$fever" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
          </children>
       </GridPane>
-      <Button layoutX="250.0" layoutY="375.0" mnemonicParsing="false" onAction="#openSymptoms3" prefHeight="33.0" prefWidth="56.0" style="-fx-background-color: b1d182;" text="Next" />
-      <Label fx:id="nameLabel" layoutX="32.0" layoutY="383.0" prefHeight="18.0" prefWidth="188.0" />
+      <Button layoutX="273.0" layoutY="368.0" maxHeight="80.0" maxWidth="80.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#openSymptoms3" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: d4d4d4;" text="Next" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Label fx:id="nameLabel" layoutX="19.0" layoutY="379.0" prefHeight="19.0" prefWidth="246.0" textFill="#979797">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
    </children>
 </AnchorPane>

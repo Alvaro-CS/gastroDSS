@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -57,6 +58,8 @@ public class Symptoms1Controller implements Initializable {
 
     @FXML
     private Label nameLabel;
+    
+    
 
     @FXML
     private void openSymptoms2(ActionEvent event) throws IOException, CLIPSException {
@@ -122,7 +125,7 @@ public class Symptoms1Controller implements Initializable {
 
     public void initData(Patient patient, Environment clips) {
         this.patient = patient;
-        nameLabel.setText("Patient's name: " + patient.getName());
+        nameLabel.setText("Patient: " + patient.getName());
         this.clips = clips;
     }
 }
