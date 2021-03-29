@@ -175,7 +175,7 @@
          </font></Button>
       <Pane prefHeight="78.0" prefWidth="444.0" style="-fx-background-color: b1d182;">
          <children>
-            <Label layoutX="169.0" layoutY="14.0" prefHeight="58.0" prefWidth="168.0" text="Diagnosis" textFill="#fffafa">
+            <Label layoutX="169.0" layoutY="14.0" prefHeight="58.0" prefWidth="193.0" text="Diagnosis" textFill="#fffafa">
                <font>
                   <Font size="40.0" />
                </font>
