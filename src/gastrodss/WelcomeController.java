@@ -9,8 +9,6 @@ import POJOS.Patient;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +24,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
-import net.sf.clipsrules.jni.FactAddressValue;
 
 public class WelcomeController implements Initializable {
 
@@ -53,6 +50,7 @@ public class WelcomeController implements Initializable {
     @FXML
     private void openSymptoms1(ActionEvent event) throws IOException {
         if (!patientName.getText().equals("")) {
+            error.setText("");
             if (female.isSelected()) {
                 gender = "Female";
             } else {

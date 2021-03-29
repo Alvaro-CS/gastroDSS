@@ -9,7 +9,6 @@ import POJOS.Patient;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +22,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
-import net.sf.clipsrules.jni.FactAddressValue;
 
 public class Symptoms3Controller implements Initializable {
 

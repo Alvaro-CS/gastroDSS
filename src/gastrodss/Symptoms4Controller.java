@@ -9,7 +9,6 @@ import POJOS.Patient;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,13 +18,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
-import net.sf.clipsrules.jni.FactAddressValue;
 
 public class Symptoms4Controller implements Initializable {
 
