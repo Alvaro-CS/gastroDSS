@@ -197,6 +197,6 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Label layoutX="45.0" layoutY="433.0" prefHeight="44.0" prefWidth="364.0" text="*Diseases in red represent serious illnesses that have&#10;a high score and therefore should not be ignored." textFill="RED" />
+      <Label alignment="CENTER" layoutX="45.0" layoutY="433.0" prefHeight="44.0" prefWidth="364.0" text="*Diseases in red represent serious illnesses that have&#10;a high score and therefore should not be ignored." textFill="RED" />
    </children>
 </AnchorPane>
