@@ -7,6 +7,7 @@ package gastrodss;
 
 import POJOS.Disease;
 import POJOS.Patient;
+import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -37,6 +38,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Paint;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sf.clipsrules.jni.CLIPSException;
@@ -199,24 +201,28 @@ public class DiagnosisController implements Initializable {
             Disease disease = new Disease(name, score);
             diseases.add(disease);
         }
-        Collections.sort(diseases, new Comparator<Disease>() {
-            @Override
-            public int compare(Disease d1, Disease d2) {
-                return (int) (d1.getScore() * 100 - d2.getScore() * 100);
-            }
-        });
+        Collections.sort(diseases, (Disease d1, Disease d2) -> (int) (d1.getScore() * 100 - d2.getScore() * 100));
+
         DecimalFormat f = new DecimalFormat("#.00"); //for showing only 2 decimals
         float percentage;
+        Disease disease;
         for (int i = 0; i < labels.size(); i++) {
-            labels.get(i).setText(diseases.get(diseases.size() - 1 - i).getName());
-            pbars.get(i).setProgress(diseases.get(diseases.size() - 1 - i).getScore());
-            percentage = diseases.get(diseases.size() - 1 - i).getScore() * 100;
-            if (percentage == 0.0) {
-                labelsp.get(i).setText("    <0.01 %"); //we cannot say a disease has 0%
+            disease = diseases.get(diseases.size() - 1 - i);
+            percentage = disease.getScore() * 100; //percentage
+            if (disease.isDont_miss()) {// diseases DONT MISS
+                labels.get(i).setText(disease.getName() + "*");
+                labels.get(i).setTextFill(Paint.valueOf("RED"));
+                labelsp.get(i).setText("    " + f.format(percentage) + " %*");
+                labelsp.get(i).setTextFill(Paint.valueOf("RED"));
             } else {
-                labelsp.get(i).setText("    " + f.format(percentage) + " %");
+                labels.get(i).setText(disease.getName()); //names of the diseases
+                if (percentage == 0.0) {
+                    labelsp.get(i).setText("    <0.01 %"); //we cannot say a disease has 0%
+                } else {
+                    labelsp.get(i).setText("    " + f.format(percentage) + " %");
+                }
             }
-
+            pbars.get(i).setProgress(disease.getScore()); //percentage bars
         }
     }
 
@@ -238,7 +244,7 @@ public class DiagnosisController implements Initializable {
             PrintWriter printW = null;
             try {
                 printW = new PrintWriter(file);
-                
+
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -249,17 +255,17 @@ public class DiagnosisController implements Initializable {
             printW.write("\nRecorded symptoms: \n");
             List<FactAddressValue> symptoms = clips.findAllFacts("symptom");
             for (FactAddressValue f : symptoms) {
-                printW.write(" "+f.getSlotValue("name").toString());
+                printW.write(" " + f.getSlotValue("name").toString());
             }
-            
+
             printW.write("\n\nDiagnosis: \n");
             for (int i = 0; i < labels.size(); i++) {
-                printW.write("\t"+labels.get(i).getText() + ": " + labelsp.get(i).getText() + "\n");
+                printW.write("\t" + labels.get(i).getText() + ": " + labelsp.get(i).getText() + "\n");
             }
             printW.close();
         }
     }
-    
+
     @FXML
     private void newPatient(ActionEvent event) throws IOException, CLIPSException {
         clips.clear();
