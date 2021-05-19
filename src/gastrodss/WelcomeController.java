@@ -29,7 +29,7 @@ public class WelcomeController implements Initializable {
 
     private Patient p;
     private Environment clips;
-
+    
     @FXML
     private TextField patientName;
 

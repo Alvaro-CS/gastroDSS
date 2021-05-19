@@ -24,7 +24,7 @@ import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.Environment;
 
 public class Symptoms4Controller implements Initializable {
-
+    
     private Patient patient;
     private Environment clips;
     @FXML
